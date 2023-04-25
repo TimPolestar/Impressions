@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressions</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="blocktop">
+		<div class="name">Impressions</div>
+
+		<div class="registration"><a href="/login" class="reg">Login</a> | <a href="/registration" class="reg">Registration</a></div>
+		
+		
+		<div class="search-box">
+			<input class="search-txt" type="text" name=""placeholder= "Type to search your impressions">
+			<a href="#"></a>
+		</div>
+			
+			<div class="navigationBlock">
+				<nav>
+					<ul>
+						<li class="recommendations">Recommendations</li>
+						<li><a href="/subscriptions">Subscriptions</a></li>
+						<li><a href="/history">Search history</a></li>
+					</ul>
+				</nav>
+			</div>
+	</div>
+		
+<div>
+	{% for video in videos %}
+		<div class="video_item"><a href="/video/{{video.id}}"><img class ="video_img" src="/static/images/{{video.id}}.png"></a></div>
+	{% endfor %}
+	<p class="namevideo">Поездка на велосипедах</p>
+</div>
+
+
+</body>
+</html>
